@@ -1,0 +1,26 @@
+====================================
+Free format basic program
+====================================
+
+>>SOURCE FORMAT IS FREE
+IDENTIFICATION DIVISION.
+PROGRAM-ID. FREE-TEST.
+*> This is a free format comment
+PROCEDURE DIVISION.
+    DISPLAY "Free format works"
+    *> Another comment
+    STOP RUN.
+
+---
+
+(start
+  (source_format_directive)
+  (program_definition
+    (identification_division
+      (program_name))
+    (procedure_division
+      (comment)
+      (display_statement ...)
+      (comment)
+      (stop_statement)
+      (period))))

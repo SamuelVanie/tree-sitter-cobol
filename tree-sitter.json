@@ -1,0 +1,41 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "cobol",
+      "camelcase": "Cobol",
+      "title": "Cobol",
+      "scope": "source.cobol",
+      "file-types": [
+        "cby",
+        "cob",
+        "cbl"
+      ],
+      "injection-regex": "^cobol$",
+      "class-name": "TreeSitterCobol"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "A new parser implementation for COBOL using tree-sitter",
+    "authors": [
+      {
+        "name": "Samuel Michael Vanie",
+        "email": "samuelmichaelvanie@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/SamuelVanie/tree-sitter-cobol"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
