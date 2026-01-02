@@ -17,7 +17,7 @@ module.exports = grammar({
     $._LINE_PREFIX_COMMENT,
     $._LINE_SUFFIX_COMMENT,
     $._LINE_COMMENT,
-    $.source_format_directive,  // NEW
+    $.source_format_directive,
     $.comment_entry,
     $._multiline_string,
   ],
