@@ -16,7 +16,7 @@ typedef struct {
     bool free_format_mode;
 } Scanner;
 
-void *tree_sitter_COBOL_external_scanner_create() {
+void* tree_sitter_cobol_external_scanner_create() {
     Scanner *scanner = ts_calloc(1, sizeof(Scanner));
     scanner->free_format_mode = false;
     return scanner;
@@ -170,7 +170,7 @@ static bool scan_format_directive(Scanner *scanner, TSLexer *lexer) {
     return true;
 }
 
-bool tree_sitter_COBOL_external_scanner_scan(void *payload, TSLexer *lexer,
+bool tree_sitter_cobol_external_scanner_scan(void *payload, TSLexer *lexer,
                                             const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
     
@@ -298,7 +298,7 @@ bool tree_sitter_COBOL_external_scanner_scan(void *payload, TSLexer *lexer,
     return false;
 }
 
-unsigned tree_sitter_COBOL_external_scanner_serialize(void *payload, char *buffer) {
+unsigned tree_sitter_cobol_external_scanner_serialize(void *payload, char *buffer) {
     Scanner *scanner = (Scanner *)payload;
     if (scanner == NULL) return 0;
     
@@ -306,14 +306,14 @@ unsigned tree_sitter_COBOL_external_scanner_serialize(void *payload, char *buffe
     return 1;
 }
 
-void tree_sitter_COBOL_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
+void tree_sitter_cobol_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     Scanner *scanner = (Scanner *)payload;
     if (scanner == NULL || length == 0) return;
     
     scanner->free_format_mode = (buffer[0] != 0);
 }
 
-void tree_sitter_COBOL_external_scanner_destroy(void *payload) {
+void tree_sitter_cobol_external_scanner_destroy(void *payload) {
     Scanner *scanner = (Scanner *)payload;
     if (scanner != NULL) {
         ts_free(scanner);
