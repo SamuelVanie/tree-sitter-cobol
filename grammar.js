@@ -23,6 +23,7 @@ module.exports = grammar({
   ],
 
   extras: $ => [
+    /\s/,
     $._WHITE_SPACES,
     $._LINE_PREFIX_COMMENT,
     $._LINE_SUFFIX_COMMENT,
