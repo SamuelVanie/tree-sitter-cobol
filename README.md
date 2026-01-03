@@ -57,12 +57,6 @@ Generate the parser:
 tree-sitter generate
 ```
 
-Run tests:
-
-```bash
-npm test
-```
-
 ### Programmatic Usage (Node.js)
 
 ```javascript
@@ -88,20 +82,6 @@ console.log(tree.rootNode.toString());
 
 This project includes extensive test coverage:
 
-### NIST COBOL85 Test Suite
-
-The project includes the full NIST COBOL85 test suite with over 400 test programs covering various COBOL features.
-
-Run all tests:
-
-```bash
-npm run nist
-```
-
-This will:
-- Parse all test files in `test/cobol85/src/`
-- Generate a summary report in `test/cobol85/summary.txt`
-- Output detailed results to `test/cobol85/result/`
 
 ### Corpus Tests
 
@@ -118,10 +98,6 @@ tree-sitter test test/corpus/minimal-cobol.txt
 tree-sitter test test/corpus/evaluate.txt
 tree-sitter test test/corpus/perform.txt
 ```
-
-### OpenESQL Tests
-
-SQL embedded COBOL tests are available in `test/ocesql/`.
 
 ## Development
 
@@ -146,8 +122,8 @@ npm run build
 
 1. Modify `grammar.js` to update the grammar rules
 2. Run `tree-sitter generate` to regenerate the parser
-3. Run `tree-sitter build` or `npm run build` to compile
-4. Test with `npm test` or `tree-sitter parse <file>`
+3. Run `tree-sitter build` to compile
+4. Test with `tree-sitter parse <file>` or `tree-sitter test`
 
 ### Adding New Tests
 
@@ -191,7 +167,7 @@ tree-sitter-cobol/
 
 ## Supported COBOL Dialects
 
-This grammar is designed to support COBOL-85 and is compatible with major COBOL compilers including:
+This grammar is designed to support all major COBOL versions and is compatible with multiple compilers including:
 
 - GNU COBOL (GnuCOBOL/OpenCOBOL)
 - IBM COBOL
@@ -214,6 +190,5 @@ When contributing:
 
 ## Acknowledgments
 
-- NIST COBOL85 test suite for comprehensive test coverage
+- Yutaro Sakamoto and all the contributors from the first project
 - tree-sitter project for the excellent parser generator
-- The COBOL community for feedback and testing

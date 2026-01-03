@@ -1,4 +1,6 @@
 #!/bin/bash
+set -xe
+
 MARK_START_S_EXPRESSION='---'
 MARK_TITLE_DECORATER="===================================="
 
